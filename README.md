@@ -9,13 +9,10 @@ Department of Precision Instrument, Tsinghua University
 [![License](https://img.shields.io/github/license/THUHoloLab/INSF?color=2ea44f)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-CUDA-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org)
-[![Stars](https://img.shields.io/github/stars/THUHoloLab/INSF?style=social)](https://github.com/THUHoloLab/INSF/stargazers)
 
 <br>
 
-<img src="assets/demo.gif" width="100%" alt="One coded frame reconstructed into 601 spectral channels">
-
-<sub>A real capture of a colour chart: one coded grayscale frame, reconstructed into 601 spectral channels.</sub>
+<img src="assets/insf.gif" width="100%" alt="How INSF works: coded acquisition and implicit neural spectral field">
 
 </div>
 
@@ -26,10 +23,6 @@ The scene is an implicit neural spectral field — a small coordinate network th
 *(x, y, λ)* to intensity — fitted directly to the measurement, with **no training data**.
 Sharing the field across frames, aligned by optical flow, extends it to **moving scenes**,
 and the compact representation keeps a 98-frame spectral video at about **1 GB instead of 62 GB**.
-
-<br>
-
-<p align="center"><img src="assets/overview.png" width="100%" alt="How INSF works"></p>
 
 ## Quick start
 
