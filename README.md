@@ -4,24 +4,34 @@
 
 **Jinwen Wei · Xinyu Liu · Shuhe Zhang · Liangcai Cao**
 
-State Key Laboratory of Precision Measurement Technology and Instruments<br>
 Department of Precision Instrument, Tsinghua University
 
-[![Paper](https://img.shields.io/badge/Paper-coming%20soon-lightgrey?style=for-the-badge)](#citation)
-[![License](https://img.shields.io/badge/License-MIT-2ea44f?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/github/license/THUHoloLab/INSF?color=2ea44f)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-CUDA-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org)
+[![Stars](https://img.shields.io/github/stars/THUHoloLab/INSF?style=social)](https://github.com/THUHoloLab/INSF/stargazers)
+
+<br>
+
+<img src="assets/demo.gif" width="100%" alt="One coded frame reconstructed into 601 spectral channels">
+
+<sub>A real capture of a colour chart: one coded grayscale frame, reconstructed into 601 spectral channels.</sub>
 
 </div>
 
-<p align="center"><img src="assets/overview.jpg" width="95%" alt="Implicit neural spectral field"></p>
+<br>
 
-A filter-array spectral camera compresses a 601-channel spectral datacube (350–950 nm) into one coded
-grayscale frame. **INSF** represents the scene as an implicit neural spectral field, a compact
-coordinate network that maps a position and a wavelength to a non-negative spectral intensity and is
-optimized directly on the coded measurements of each scene, without pretraining or training data.
-Fitting the field to several coded frames, aligned by optical flow when the scene moves, enables
-static and dynamic spectral imaging.
+**INSF** turns a single coded frame of a filter-array camera into a full spectral cube.
+The scene is an implicit neural spectral field — a small coordinate network that maps
+*(x, y, λ)* to intensity — fitted directly to the measurement, with **no training data**.
+Sharing the field across frames, aligned by optical flow, extends it to **moving scenes**,
+and the compact representation keeps a 98-frame spectral video at about **1 GB instead of 62 GB**.
 
-## Getting started
+<br>
+
+<p align="center"><img src="assets/overview.png" width="100%" alt="How INSF works"></p>
+
+## Quick start
 
 ```bash
 pip install torch --index-url https://download.pytorch.org/whl/cu128          # match your CUDA
@@ -33,8 +43,7 @@ python main.py reconstruct shared-field --config configs/move1_shared.yaml      
 python main.py reconstruct mc-window   --config configs/move2_mc_window.yaml     # moving scene
 ```
 
-The measurements and the coded mask of the camera are not distributed with the code
-(see [`data/README.md`](data/README.md)).
+Camera data are not included; see [`data/README.md`](data/README.md).
 
 ## Citation
 
@@ -45,5 +54,3 @@ The measurements and the coded mask of the camera are not distributed with the c
   year    = {2026}
 }
 ```
-
-<div align="center"><sub>Released under the <a href="LICENSE">MIT License</a>.</sub></div>
