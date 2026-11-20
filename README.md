@@ -115,3 +115,7 @@ knots) and the output has 61 knots (350:10:950 nm) that are interpolated to the 
 ## Citation
 
 Please cite the paper if you use this code (reference to be added after publication).
+
+## License
+
+MIT License, see [LICENSE](LICENSE).
