@@ -1,0 +1,4 @@
+out: outputs/baselines/runs/admm
+env:
+  QS_FRAME_DIR: data/measurements/move2
+  QS_HOLDOUT: data/holdout_10pct_seed20261019.npy

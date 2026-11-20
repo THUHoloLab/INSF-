@@ -1,0 +1,19 @@
+outputs/
+__pycache__/
+*.pyc
+.DS_Store
+# large data files: see data/README.md
+data/mask/
+data/measurements/
+data/colorchecker_raw/
+data/public/
+data/*.npy
+data/*.mat
+data/*.xlsx
+*.mat
+*.xlsx
+*.npy
+*.npz
+*.raw
+*.qs
+*.pt

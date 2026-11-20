@@ -1,0 +1,11 @@
+numpy>=1.24
+scipy>=1.10
+h5py>=3.9
+matplotlib>=3.7
+opencv-python>=4.8
+pillow>=10.0
+pyyaml>=6.0
+openpyxl>=3.1
+OpenEXR>=3.2
+colour-science>=0.4
+imageio[ffmpeg]>=2.31

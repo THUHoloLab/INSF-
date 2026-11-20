@@ -1,0 +1,8 @@
+method: e1
+frame_dir: data/measurements/move2
+mask: data/mask/mask_3D.mat
+xyzbar: data/xyzbar.mat
+crop_size: 512
+epochs: 100
+out: outputs/move2/e1_independent
+cube_dir: outputs/move2/cubes/e1

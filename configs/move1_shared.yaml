@@ -1,0 +1,8 @@
+frame_dir: data/measurements/move1
+mask: data/mask/mask_3D.mat
+output_root: outputs/move1_shared
+crop_size: 800
+train_count: 80
+end_frame: 103
+epochs: 100
+save_cube: true

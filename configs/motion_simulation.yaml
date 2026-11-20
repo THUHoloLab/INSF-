@@ -1,0 +1,5 @@
+mask: data/mask/mask_3D.mat
+output: outputs/motion_simulation
+crop_size: 256
+num_scenes: 5
+num_noise_seeds: 5

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "insf"
+version = "0.1.0"
+description = "Implicit neural spectral fields for static and dynamic computational spectral imaging"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "h5py>=3.9",
+    "matplotlib>=3.7",
+    "opencv-python>=4.8",
+    "pillow>=10.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+data = ["openpyxl>=3.1"]
+datasets = ["OpenEXR>=3.2"]
+evaluation = ["colour-science>=0.4", "imageio[ffmpeg]>=2.31"]
+
+[project.scripts]
+insf = "insf.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["insf*"]

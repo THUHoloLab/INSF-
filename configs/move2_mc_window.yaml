@@ -1,0 +1,15 @@
+method: mc
+frame_dir: data/measurements/move2
+mask: data/mask/mask_3D.mat
+holdout: data/holdout_10pct_seed20261019.npy
+flow_dir: outputs/move2/flow
+crop_size: 512
+radius: 2
+nb_frac: 1
+epochs: 100
+warm_epochs: 30
+warm_lr: 3.0e-4
+start: 0
+end: 98
+out: outputs/move2/mc_window
+cube_dir: outputs/move2/cubes/mc_window

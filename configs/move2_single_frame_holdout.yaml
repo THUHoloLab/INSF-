@@ -1,0 +1,9 @@
+method: e1
+frame_dir: data/measurements/move2
+mask: data/mask/mask_3D.mat
+holdout: data/holdout_10pct_seed20261019.npy
+crop_size: 512
+stride: 3
+epochs: 100
+out: outputs/move2/e1_holdout
+cube_dir: outputs/move2/cubes/e1_holdout
