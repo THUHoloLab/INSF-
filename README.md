@@ -21,8 +21,7 @@ Department of Precision Instrument, Tsinghua University
 **INSF** turns a single coded frame of a filter-array camera into a full spectral cube.
 The scene is an implicit neural spectral field — a small coordinate network that maps
 *(x, y, λ)* to intensity — fitted directly to the measurement, with **no training data**.
-Sharing the field across frames, aligned by optical flow, extends it to **moving scenes**,
-and the compact representation keeps a 98-frame spectral video at about **1 GB instead of 62 GB**.
+Sharing the field across frames, aligned by optical flow, extends it to **moving scenes**.
 
 ## Quick start
 
